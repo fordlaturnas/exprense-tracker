@@ -1,4 +1,5 @@
-import './components_styles/ExpenseDate.css';
+import React from 'react';
+import './ExpenseDate.css';
 /*
 *            received props from ExpenseItem        
 *                      ↓

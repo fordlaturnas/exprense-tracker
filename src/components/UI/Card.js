@@ -1,4 +1,5 @@
-import  './components_styles/Card.css'
+import React from 'react';
+import  './Card.css'
 
 const Card = (props) => {
     const classes = 'card ' + props.className;      // appending the card.css to other component. Bale kung san mo man ilagay ang <Card></Card>, matik na mada-dagdag ang Card.css dun sa class na yun

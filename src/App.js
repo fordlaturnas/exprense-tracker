@@ -1,7 +1,8 @@
-import ShowExpenses from "./components/ShowExpenses";
+import React from 'react';
+import Expenses from './components/Expenses/Expenses';
+import NewExpense from './components/NewExpense/NewExpense';
 
 function App() {
-
   const expenses = [
     {
       id: 'e1',
@@ -11,8 +12,8 @@ function App() {
     },
     {
       id: 'e2',
-      title: 'New TV', 
-      amount: 799.49, 
+      title: 'New TV',
+      amount: 799.49,
       date: new Date(2021, 2, 12),
     },
     {
@@ -29,9 +30,16 @@ function App() {
     },
   ];
 
+  // nakuha na nya ang data mula  child to parent.
+  const addExpenseHandler = (expense) => {
+    console.log('In App.js');
+    console.log(expense);
+  };
+
   return (
     <div className="App">
-      <ShowExpenses item={expenses}/>  {/** passing props named "item" in ShowExpenses.js.*/}
+      <NewExpense onAddExpense={addExpenseHandler} />
+      <Expenses item={expenses} />
     </div>
   );
 }
